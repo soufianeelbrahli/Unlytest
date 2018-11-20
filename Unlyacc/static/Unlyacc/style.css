@@ -1,0 +1,33 @@
+#desc,#title1,#welcoming{
+  text-align: center;
+  color: white;
+  }
+#slider{
+  background-image: url("background.jpg");
+    background-repeat: repeat;
+}
+#image1{
+  background-image: url("write.PNG");
+}
+#headerh3,#headerh3+p{
+  text-align: center;
+}
+#send{
+  align-self: center;
+  height: 100px;
+  width: 8%;
+}
+#imagetoresize1{
+  height: 40%;
+  width: 40%;
+}
+#firstcard{
+  align-items: center;
+}
+#footer_,#footer__{
+  background-image: url("http://www.fondsecran.eu/a/get_photo/83248/1920/1080");
+  padding: 4em 0;
+}
+#titlemessage{
+  text-align: center;
+}

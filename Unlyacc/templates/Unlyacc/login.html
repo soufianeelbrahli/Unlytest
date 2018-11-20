@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <h1>Welcome</h1>
+        <p>You can log in here</p>
+        <h4>Login</h4>
+        <form method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button class="btn btn-danger" type="submit" name="button">Sign in</button>
+          <a href="/Unlyacc/reset-password/">Forgot password?</a>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'basemessages.html' %}
+
+{%load static%}
+<link rel="stylesheet" href="{%static "Unlyacc/style.css"%}">
+{% block body%}
+
+
+{% for Message in messages %}
+<div class="container">
+  <div class="card" style="width: 25rem;">
+    <article class="media content-section">
+      <div style="text-align:center;" class="media-body">
+        <div class="article-metadata">
+          <div class="card-header">
+            <a class="mr-2" href="#">{{Message.author}}</a>
+            <small class="text-muted" >{{Message.date_posted}}</small>
+          </div>
+        </div>
+        <h4><a class="article-title" href="{% url 'message-detail' Message.id %}">{{Message.title}}</a></h4>
+        <p class="article-content">{{Message.content}}</p>
+      </div>
+    </article>
+  </div>
+  <br>
+</div>
+  {%endfor%}
+
+
+
+
+{% endblock %}

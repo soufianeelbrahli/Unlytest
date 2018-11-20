@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Profile</title>
+{%load static%}
+<link rel="stylesheet" href="{%static "Unlyacc/style.css"%}">
+{% endblock %}
+
+{% block body %}
+  <div id="slider" class="jumbotron" style="display:block;">
+    <div class="container text-center">
+      <h1 id="title1" class="asap-front">UNLYACC</h1>
+      <h2 id="welcoming" class="asap-front">Bienvenue {{user.username}}</h2>
+      <p id="desc">Ce site vous permet de publier vos problèmes rencontrés</p>
+      <div class="btn-group buffer">
+        <center>
+          <a href="#" class="btn btn-lg btn-primary outline" >Profile</a>
+          <a href="/Unlyacc/messages" class="btn btn-lg btn-danger outline" >Messages</a>
+          <a href="/Unlyacc/Edit" class="btn btn-lg btn-warning outline" >Mes paramètres</a>
+          <a href="https://unly.org/" class="btn btn-lg btn-success outline" target="_blank">Site</a>
+          <a href="/Unlyacc/logout" class="btn btn-lg btn-info outline" >Déconnexion</a>
+        </center>
+      </div>
+    </div>
+  </div>
+    <section class="container">
+      <section class="box special">
+        <header class="major" >
+          <h3 id="headerh3">
+            Vous pouvez poster vos problèmes en attente d'une réponse
+          </h3>
+          <p >
+              Vous pouvez rédiger vos messages concernant les problèmes que vous avez rencontré, vous pouvez aussi les modifier,
+              supprimer, changer vos paramètres ainsi que votre mot de passe.
+          </p>
+        </header>
+        <br><br>
+        <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Un_nv1Yja0zoww5kh0nXKyRNaEw1aOnt-aVc_qyhcZgn73-I" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Vous pouvez acceder à votre profil</h5>
+              <p class="card-text">Vous pouvez voir les informations qui vous concernent, et ainsi si vous voulez les modifier.</p>
+            </div>
+          </div>
+            <div class="card">
+              <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh-Gj12GAdAWWAGjgO7vkp4YA2BiBaslfURBdlOj02xBEpu9C" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Vous pouvez voir vos messages</h5>
+                <p class="card-text">Vous pouvez acceder à vos messages publiés afin de les modifier, les supprimer ou bien ajouter un nouveau message .</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKrhlSanCYgcRYexBENS4062ZdPgVGuWjxvb-SF8yZQjjc3Kk4" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Vos paramètres</h5>
+                <p class="card-text">Vous pouvez modifier les paramètres qui concernent votre profil (Prénom, nom et mot de passe).</p>
+              </div>
+            </div>
+          </div>
+      </section>
+    </section>
+    <footer id="footer_" class="card">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <br><h6 style="color : white;">Copyright &copy; 2018 Unly</h6>
+          </div>
+          <div class="col-sm-4">
+            <h6 style="color : white;">A propos</h6>
+            <p style="color : white;">Ce site vous permet de publier vos problèmes rencontrés</p>
+          </div>
+          <div class="col-sm-2">
+            <h6 style="color : white;">Navigation</h6>
+            <ul style="color : white;">
+              <li><a href="/Unlyacc/profile">Profile</a></li>
+              <li><a href="/Unlyacc/messages">Messages</a></li>
+              <li><a href="/Unlyacc/Edit">Paramètres</a></li>
+              <li><a href="/Unlyacc/logout">Déconnexion</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-2">
+            <h6 style="color : white;">Suivez-nous</h6>
+            <ul style="color : white;">
+              <li><a href="https://unly.org/" target="_blank">Site Web</a></li>
+              <li><a href="https://www.facebook.com/UnlyEd" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/UnlyEd" target="_blank">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/company/unly" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+{% endblock %}

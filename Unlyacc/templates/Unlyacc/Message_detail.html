@@ -1,0 +1,30 @@
+{% extends 'baseupdatemessage.html' %}
+
+
+{% block body%}
+
+<div class="container">
+  <div class="card" style="width: 25rem;">
+    <article class="media content-section">
+      <div style="text-align:center;" class="media-body">
+        <div class="article-metadata">
+          <div class="card-header">
+            <a class="mr-2" href="#">{{object.author}}</a>
+            <small class="text-muted" >{{object.date_posted}}</small>
+          </div>
+        </div>
+        <h4 class="article-title">{{object.title}}</h4>
+        <p class="article-content">{{object.content}}</p>
+
+        <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'message-update' object.id %}">Modifier</a>
+        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'message-delete' object.id %}">Supprimer</a>
+      </div>
+    </article>
+  </div>
+  <br>
+</div>
+
+
+
+
+{% endblock %}
